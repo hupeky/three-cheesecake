@@ -1,0 +1,17 @@
+{
+	"plugins": [
+		["transform-class-properties"],
+		["transform-es2015-destructuring"],
+		["transform-object-rest-spread"]
+	],
+	"presets": [
+	  [
+		"env",
+		{
+			"modules": false,
+			"targets": {"browsers": ["last 2 versions"]},
+			"debug": true
+		}
+	  ]
+	]
+  }

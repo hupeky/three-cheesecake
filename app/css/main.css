@@ -1,0 +1,75 @@
+@import "reset.css";
+@import "bootstrap.css";
+@import "bootstrap-edit.css";
+@import "style.css";
+@import "include.scss";
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.relative {
+	position:relative;
+}
+
+html, body {
+    height:100%;font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+#main {
+    position: relative;
+    padding:15px;
+    padding-top:40px;
+}
+.black-bg {width:200px;position:fixed;top:0px;height:100vh;background-color:rgb(78, 78, 78);}
+#side {
+    position:relative;
+    color:white;
+    background-color:rgb(78, 78, 78);
+}
+
+#top-bar{
+	width:100%;
+	padding-top:20px;
+	background-color: rgb(109, 109, 109);
+	color:white;
+	height:70px;
+}
+#main{padding:3px;padding-top:0px;}
+
+.webglviewport  {
+	position:relative;height:700px;
+	width:100%;font-size:30px;
+	overflow:hidden;float:left;
+	transition:300ms;
+	transition-property:position,background-color,width;
+	transition-timing-function: linear;  
+}
+.visible {
+	visibility:hidden;
+}
+
+#vp0 {width:100%;height:100vh;position:relative;}
+
+.title-screen{
+    background: url(../imgs/intro-screen.jpg) no-repeat center center fixed; position:absolute;width:100%;height:100%;top:0;left:0;z-index:50;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	background-color:white;
+}
+
+.title-info {width:80%;margin-left:10%;margin-right:10%;margin-top:50px;}
+.title-info h3 {color:red;font-size:20px;margin:10px 0}
+.title-info p {margin-bottom:10px;font-size:14px;margin-right:20px;}
+
+.load-area {position:relative;top:15%;margin-left:auto;margin-right:auto;width:200px;height:75px; }
+.load-bar {width:0%;background-color:red;height:10px;margin-bottom:5px;}
+.load-button, .enter-button {position:absolute;width:100%;height:50px;background-color:blue;text-align:center;color:white;font-weight:bold;font-size:20px;opacity:0.5;}
+.arrow {display:block;position:relative;height:100%;width:auto;top:0;float:left;}
+.load-button p,.enter-button p {padding-top:15px;}
+.enter-button {opacity:1;}
+#enter {display:none;cursor:pointer;}

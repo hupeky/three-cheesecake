@@ -39,6 +39,10 @@ var params = {
 		{name:'home', parent:{}, directChildren:[{}], allChildren:[{}], ancestors:[{}], selfFade:false, parentFade:false},
 */
 
+var barButtons = document.getElementById("barButtons");
+barButtons.innerHTML = "<button id='button'>Carousel</button>";
+var button = document.getElementById("button");
+
 var carousel = {
 	current: 1,
 	currentlyHovering: 1,
@@ -451,13 +455,13 @@ var myView =
 				console.log ('set to level 0');
 				camControls.level = 0;
 				camControls.mouseButtons = { PAN: THREE.MOUSE.LEFT, ZOOM: THREE.MOUSE.MIDDLE, ORBIT: THREE.MOUSE.RIGHT};
-
-				camControls.minPolarAngle = 0.5; // radians
-				camControls.maxPolarAngle = 1.1; // radians
+				button.innerHTML = "Orbit";
+				camControls.minPolarAngle = 0.3; // radians
+				camControls.maxPolarAngle = 1.3; // radians
 				camControls.minAzimuthAngle = - 0; // radians
 				camControls.maxAzimuthAngle = 0; // radians
 
-				camControls.minDistance = 5;
+				camControls.minDistance = 3;
 				camControls.maxDistance = 8;
 
 				camControls.rotateSpeed = 0.3;
@@ -465,9 +469,10 @@ var myView =
 				break;
 			case 1: 
 				camControls.level = 1;
+				button.innerHTML = "Carousel";
 				console.log ('set to level 1');
-				camControls.minPolarAngle = 0; // radians
-				camControls.maxPolarAngle = 1.2; // radians
+				camControls.minPolarAngle = 0.0; // radians
+				camControls.maxPolarAngle = 1.5; // radians
 			
 				camControls.minAzimuthAngle = - Infinity; // radians
 				camControls.maxAzimuthAngle = Infinity; // radians
@@ -641,12 +646,6 @@ function init() {
 	var filtered = carousel.filter (inCarousels); 
 	console.log ('filtered',filtered);
 
-	
-
-
-	var barButtons = document.getElementById("barButtons");
-	barButtons.innerHTML = "<button id='button' > Change Cam Behaviour</button>";
-	var button = document.getElementById("button");
 	button.onclick = function(event) { myView.setCamBehavior(myView.controls,myView.levelSwitch) };
 
 	function complete(param,param2) {
@@ -844,7 +843,6 @@ function mouseup( event ) {
 			myView.mouseButtonPressed.left = false;
 			carousel.current = carousel.currentlyHovering;
             //bartitle.innerHTML = 'current: ' + carousel.current + 'hovering: ' + carousel.currentlyHovering;
-            bartitle.innerHTML = '';
 			carouselToMoveBackto = myScene.scene.getObjectByName('carousel_' + carousel.current);
 			TweenLite.to(myView.controls.target, 0.4, {x:carouselToMoveBackto.position.x,ease:Power2.easeOut,overwrite:'all'}); 
 		}

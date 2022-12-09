@@ -2,7 +2,6 @@
 @import "bootstrap.css";
 @import "bootstrap-edit.css";
 @import "style.css";
-@import "include.scss";
 
 .group:after {
 	content: "";
@@ -10,8 +9,23 @@
 	clear: both;
 }
 
+.barButtons {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
 .relative {
 	position:relative;
+}
+
+#button {
+	background:rgb(44, 44, 44);
+	font-size: 18px;
+	color:rgb(172, 172, 172);
+	padding: 10px;
+	border-radius: 5px;
+
 }
 
 html, body {
@@ -20,7 +34,7 @@ html, body {
 
 #main {
     position: relative;
-    padding:15px;
+    padding:0 !important;
     padding-top:40px;
 }
 .black-bg {width:200px;position:fixed;top:0px;height:100vh;background-color:rgb(78, 78, 78);}

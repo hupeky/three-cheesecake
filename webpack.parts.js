@@ -42,7 +42,7 @@ exports.extractCSS = ({ include, exclude }) => {
           include,
           exclude,
 
-          use: plugin.extract([ 'css-loader', 'sass-loader' ]),
+          use: plugin.extract([ 'css-loader']),
         },
       ],
     },

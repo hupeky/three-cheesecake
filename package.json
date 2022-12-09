@@ -8,6 +8,7 @@
 		"watch": "webpack -w",
 		"serve": "webpack-dev-server --env development",
 		"build": "webpack --env production",
+		"build-env": "webpack --env development",
 		"serve-prod": "webpack-dev-server --env production",
 		"serve-host": "webpack-dev-server --env development --port 8030 --host 0.0.0.0",
 		"nodemon": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\""
@@ -40,9 +41,7 @@
 		"html-webpack-plugin": "^2.30.1",
 		"image-webpack-loader": "^3.4.2",
 		"jquery": "^3.2.1",
-		"node-sass": "^4.7.2",
 		"nodemon": "^1.12.1",
-		"sass-loader": "^6.0.6",
 		"style-loader": "^0.19.0",
 		"traverse": "^0.6.6",
 		"url-loader": "^0.6.2",

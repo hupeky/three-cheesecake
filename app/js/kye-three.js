@@ -232,7 +232,7 @@ var myScene = {
 	clickColor: new THREE.Color().setRGB( 0.15, 0.15, 0.2 ),
 
 	camToLoad: ['cam0'],//  null or array of strings ['nameofobject3d']
-	fileToLoad: '../exports/auto-export-three.dae',
+	fileToLoad: './exports/auto-export-three.dae',
 	texturePath: 'maya2017/sourceimages/',
 	boundedList: [
 		{name:'home', childPosition:100, parent:null, directChildren:[], allChildren:[], ancestors:[], selfFade:false, parentFade:false},
@@ -561,7 +561,7 @@ for (var i = 0, len = myScene.maps.length; i < len; i++) { // for each texture i
 };
 
 var loader2 = new THREE.CubeTextureLoader(manager);
-loader2.setPath( '../app/imgs/cube/' );
+loader2.setPath( './imgs/cube/' );
 
 var textureCube = loader2.load( [
 	'envmap_left.jpg', 'envmap_right.jpg',

@@ -26,6 +26,7 @@ const commonConfig = merge([
 			{ from: 'js/three/js-libs/libs/stats.min.js', to: 'js/three/js-libs/libs'},
 			{ from: 'js/three/js-libs/libs/dat.gui.min.js', to: 'js/three/js-libs/libs'},
 			{ from: 'exports', to: 'exports'}, 
+      { from: 'imgs', to: 'imgs'}, 
 		]),
 		new HtmlWebpackPlugin({title: "Webpack demo",template:  PATHS.app + '/openCollada-outliner.html',inject: true}),
 		new HtmlWebpackIncludeAssetsPlugin({
